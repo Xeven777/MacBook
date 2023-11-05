@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "sfr";
+  src: url(/SFPRODISPLAYREGULAR.OTF);
+}
+@font-face {
+  font-family: "sfb";
+  src: url(/SFPRODISPLAYBOLD.OTF);
+}
+@font-face {
+  font-family: "ps";
+  src: url(/ProductSansInfanity.ttf);
+}
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  font-family: "sfr", sans-serif;
+  min-height: 100vh;
+  color: rgb(255, 255, 255);
+  background-color: #220e22;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 2rem;
+  background: rgba(117, 117, 117, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 3;
+}
+header h3 {
+  font-size: 1.3rem;
+}
+.logos {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  color: aliceblue;
+  font-family: "ps";
+  background-color: #1616164b;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+button:hover {
+  border-color: #7d83ff;
+  backdrop-filter: blur(2px);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.outer {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 100vh;
+}
+.outer iframe {
+  width: 100%;
+  height: 100%;
+}
+.inside {
+  z-index: 2;
+  font-family: "sfb", sans-serif;
+  max-width: 700px;
+  text-align: center;
+  user-select: none;
+}
+.inside p {
+  font-size: 5vw;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(198, 183, 199, 0.4);
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  padding: 1rem;
+  user-select: none;
+}
+a {
+  text-decoration: none;
+  color: azure;
+  cursor: cell;
+}
+a:hover {
+  text-shadow: 0 0 8px whitesmoke;
+}
